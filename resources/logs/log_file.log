@@ -1,0 +1,1210 @@
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/dbproj/
+
+
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/dbproj/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-838-552
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'ikiru', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('ikiru', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 21:04:51] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/auctions              ###
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 21:05:06] "GET /dbproj/auctions?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI0OTE0OTEsImV4cCI6MTYyMjQ5MzI5MSwidXNlcm5hbWUiOiJpa2lydSJ9.K8UIjDn1gVUOrNF6TTF6ZDHpwaWgpy5TTQxi3Rrc-1 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/auctions              ###
+DEBUG:logger:---- users  ----
+DEBUG:logger:(1, 'A tatiana queria uma caneta então está aqui :)')
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 21:05:13] "GET /dbproj/auctions?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI0OTE0OTEsImV4cCI6MTYyMjQ5MzI5MSwidXNlcm5hbWUiOiJpa2lydSJ9.K8UIjDn1gVUOrNF6TTF6ZDHpwaWgpy5TTQxi3Rrc-1M HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/dbproj/
+
+
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/dbproj/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-838-552
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'Cardozo', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('Cardozo', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:39:15] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:42:38] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDA3NTUsImV4cCI6MTYyMjUwMjU1NSwidXNlcm5hbWUiOiJDYXJkb3pvIn0.gJjoTuhdOnvMJLsmzjUUdikWy1Q3nbNJKM85oRmEMPE HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/auction/<ean>            ###
+DEBUG:logger:auction: 3
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:42:47] "GET /dbproj/auction/3?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDA3NTUsImV4cCI6MTYyMjUwMjU1NSwidXNlcm5hbWUiOiJDYXJkb3pvIn0.gJjoTuhdOnvMJLsmzjUUdikWy1Q3nbNJKM85oRmEMPE HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/auction/<ean>            ###
+DEBUG:logger:auction: 1
+DEBUG:logger:---- selected auction  ----
+DEBUG:logger:(1, 'caneta', 10.0, 'ACTIVE', 'A tatiana queria uma caneta então está aqui :)', 'USED', datetime.datetime(2021, 5, 31, 17, 0))
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:42:55] "GET /dbproj/auction/1?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDA3NTUsImV4cCI6MTYyMjUwMjU1NSwidXNlcm5hbWUiOiJDYXJkb3pvIn0.gJjoTuhdOnvMJLsmzjUUdikWy1Q3nbNJKM85oRmEMPE HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /auction              ###
+INFO:logger:---- new auction created ----
+DEBUG:logger:payload: {'initial_price': 3.5, 'title': 'caneta', 'description': 'A tatiana queria uma caneta então está aqui :)', 'condition': 'USED', 'final_date': '31/05/21 17:00:00'}
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:44:41] "POST /dbproj/auction?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDA3NTUsImV4cCI6MTYyMjUwMjU1NSwidXNlcm5hbWUiOiJDYXJkb3pvIn0.gJjoTuhdOnvMJLsmzjUUdikWy1Q3nbNJKM85oRmEMPE HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /auction              ###
+INFO:logger:---- new auction created ----
+DEBUG:logger:payload: {'initial_price': 3.5, 'title': 'caneta', 'description': 'A tatiana queria uma caneta então está aqui :)', 'condition': 'USED', 'final_date': '1/06/21 16:05:00'}
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:45:04] "POST /dbproj/auction?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDA3NTUsImV4cCI6MTYyMjUwMjU1NSwidXNlcm5hbWUiOiJDYXJkb3pvIn0.gJjoTuhdOnvMJLsmzjUUdikWy1Q3nbNJKM85oRmEMPE HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 1 and bidding: 30
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:45:23] "GET /dbproj/bid/1/30?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDA3NTUsImV4cCI6MTYyMjUwMjU1NSwidXNlcm5hbWUiOiJDYXJkb3pvIn0.gJjoTuhdOnvMJLsmzjUUdikWy1Q3nbNJKM85oRmEMPE HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'sneves', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('sneves', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:45:40] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 1 and bidding: 30
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:45:56] "GET /dbproj/bid/1/30?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDExNDAsImV4cCI6MTYyMjUwMjk0MCwidXNlcm5hbWUiOiJzbmV2ZXMifQ.IidHItZzrIgNmufUebJ4qWB3-38j-SqoJD-NJMS7ld4 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'ikiru', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('ikiru', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:46:58] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/auctions              ###
+DEBUG:logger:---- users  ----
+DEBUG:logger:(1, 'A tatiana queria uma caneta então está aqui :)')
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:47:07] "GET /dbproj/auctions?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDEyMTgsImV4cCI6MTYyMjUwMzAxOCwidXNlcm5hbWUiOiJpa2lydSJ9.dV8Cw5gPmv9MJe1vUSGM6_N6NX0fXoBCHZiok571Xao HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:47:16] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDEyMTgsImV4cCI6MTYyMjUwMzAxOCwidXNlcm5hbWUiOiJpa2lydSJ9.dV8Cw5gPmv9MJe1vUSGM6_N6NX0fXoBCHZiok571Xao HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+DEBUG:logger:(1, 'A tatiana queria uma caneta então está aqui :)')
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:47:38] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDExNDAsImV4cCI6MTYyMjUwMjk0MCwidXNlcm5hbWUiOiJzbmV2ZXMifQ.IidHItZzrIgNmufUebJ4qWB3-38j-SqoJD-NJMS7ld4 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 1 and bidding: 40
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:47:55] "GET /dbproj/bid/1/40?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDEyMTgsImV4cCI6MTYyMjUwMzAxOCwidXNlcm5hbWUiOiJpa2lydSJ9.dV8Cw5gPmv9MJe1vUSGM6_N6NX0fXoBCHZiok571Xao HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/auction/<ean>            ###
+DEBUG:logger:auction: 1
+DEBUG:logger:---- selected auction  ----
+DEBUG:logger:(1, 'caneta', 40.0, 'ACTIVE', 'A tatiana queria uma caneta então está aqui :)', 'USED', datetime.datetime(2021, 6, 1, 16, 5))
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:48:06] "GET /dbproj/auction/1?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDA3NTUsImV4cCI6MTYyMjUwMjU1NSwidXNlcm5hbWUiOiJDYXJkb3pvIn0.gJjoTuhdOnvMJLsmzjUUdikWy1Q3nbNJKM85oRmEMPE HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /auction              ###
+INFO:logger:---- new auction created ----
+DEBUG:logger:payload: {'initial_price': 3.5, 'title': 'caneta', 'description': 'A tatiana queria uma caneta então está aqui :)', 'condition': 'dsdsd', 'final_date': '1/06/21 16:05:00'}
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:48:28] "POST /dbproj/auction?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDA3NTUsImV4cCI6MTYyMjUwMjU1NSwidXNlcm5hbWUiOiJDYXJkb3pvIn0.gJjoTuhdOnvMJLsmzjUUdikWy1Q3nbNJKM85oRmEMPE HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+DEBUG:logger:(1, 'A tatiana queria uma caneta então está aqui :)')
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:49:03] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDEyMTgsImV4cCI6MTYyMjUwMzAxOCwidXNlcm5hbWUiOiJpa2lydSJ9.dV8Cw5gPmv9MJe1vUSGM6_N6NX0fXoBCHZiok571Xao HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /auction              ###
+INFO:logger:---- new auction created ----
+DEBUG:logger:payload: {'initial_price': 3.5, 'title': 'livroooo', 'description': 'O manuel da esquina é um bom livro', 'condition': 'USED', 'final_date': '1/06/21 16:05:00'}
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:49:43] "POST /dbproj/auction?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDEyMTgsImV4cCI6MTYyMjUwMzAxOCwidXNlcm5hbWUiOiJpa2lydSJ9.dV8Cw5gPmv9MJe1vUSGM6_N6NX0fXoBCHZiok571Xao HTTP/1.1" 200 -
+INFO:logger:###              /dbproj/auctions/<keyword>             ###
+DEBUG:logger:keyword: A Tatiana
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:49:48] "GET /dbproj/auctions/A%20Tatiana?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI0ODE5MTksImV4cCI6MTYyMjQ4MzcxOSwidXNlcm5hbWUiOiJDYXJkb3pvIn0.pTePhr7mJUmW7oil1HpzEmirEMo-z304ViQ_QfOEMK8 HTTP/1.1" 200 -
+INFO:logger:###              /dbproj/auctions/<keyword>             ###
+DEBUG:logger:keyword: A Tatiana
+DEBUG:logger:(1, 'A tatiana queria uma caneta então está aqui :)')
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:49:54] "GET /dbproj/auctions/A%20Tatiana?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDEyMTgsImV4cCI6MTYyMjUwMzAxOCwidXNlcm5hbWUiOiJpa2lydSJ9.dV8Cw5gPmv9MJe1vUSGM6_N6NX0fXoBCHZiok571Xao HTTP/1.1" 200 -
+INFO:logger:###              /dbproj/auctions/<keyword>             ###
+DEBUG:logger:keyword: livro
+DEBUG:logger:(2, 'O manuel da esquina é um bom livro')
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:50:05] "GET /dbproj/auctions/livro?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDEyMTgsImV4cCI6MTYyMjUwMzAxOCwidXNlcm5hbWUiOiJpa2lydSJ9.dV8Cw5gPmv9MJe1vUSGM6_N6NX0fXoBCHZiok571Xao HTTP/1.1" 200 -
+INFO:logger:###              /dbproj/auctions/<keyword>             ###
+DEBUG:logger:keyword:  MANUEL
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:50:15] "GET /dbproj/auctions/%20MANUEL?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDEyMTgsImV4cCI6MTYyMjUwMzAxOCwidXNlcm5hbWUiOiJpa2lydSJ9.dV8Cw5gPmv9MJe1vUSGM6_N6NX0fXoBCHZiok571Xao HTTP/1.1" 200 -
+INFO:logger:###              /dbproj/auctions/<keyword>             ###
+DEBUG:logger:keyword: MANUEL
+DEBUG:logger:(2, 'O manuel da esquina é um bom livro')
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:50:21] "GET /dbproj/auctions/MANUEL?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDEyMTgsImV4cCI6MTYyMjUwMzAxOCwidXNlcm5hbWUiOiJpa2lydSJ9.dV8Cw5gPmv9MJe1vUSGM6_N6NX0fXoBCHZiok571Xao HTTP/1.1" 200 -
+INFO:logger:###              /dbproj/auctions/<keyword>             ###
+DEBUG:logger:keyword: é um bom livro
+DEBUG:logger:(2, 'O manuel da esquina é um bom livro')
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:50:37] "GET /dbproj/auctions/é%20um%20bom%20livro?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDEyMTgsImV4cCI6MTYyMjUwMzAxOCwidXNlcm5hbWUiOiJpa2lydSJ9.dV8Cw5gPmv9MJe1vUSGM6_N6NX0fXoBCHZiok571Xao HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/auction/<ean>            ###
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:50:47] "PUT /dbproj/auction/1?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDEyMTgsImV4cCI6MTYyMjUwMzAxOCwidXNlcm5hbWUiOiJpa2lydSJ9.dV8Cw5gPmv9MJe1vUSGM6_N6NX0fXoBCHZiok571Xao HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/auction/<ean>            ###
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:51:07] "PUT /dbproj/auction/2?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDEyMTgsImV4cCI6MTYyMjUwMzAxOCwidXNlcm5hbWUiOiJpa2lydSJ9.dV8Cw5gPmv9MJe1vUSGM6_N6NX0fXoBCHZiok571Xao HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/auction/<ean>            ###
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:51:37] "[31m[1mPUT /dbproj/auction/2?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDEyMTgsImV4cCI6MTYyMjUwMzAxOCwidXNlcm5hbWUiOiJpa2lydSJ9.dV8Cw5gPmv9MJe1vUSGM6_N6NX0fXoBCHZiok571Xao HTTP/1.1[0m" 400 -
+INFO:logger:###              DEMO: PUT /dbproj/auction/<ean>            ###
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:51:41] "PUT /dbproj/auction/2?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDEyMTgsImV4cCI6MTYyMjUwMzAxOCwidXNlcm5hbWUiOiJpa2lydSJ9.dV8Cw5gPmv9MJe1vUSGM6_N6NX0fXoBCHZiok571Xao HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/auction/<ean>            ###
+ERROR:logger:'title'
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:51:53] "PUT /dbproj/auction/2?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDEyMTgsImV4cCI6MTYyMjUwMzAxOCwidXNlcm5hbWUiOiJpa2lydSJ9.dV8Cw5gPmv9MJe1vUSGM6_N6NX0fXoBCHZiok571Xao HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/auction/<ean>            ###
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:52:01] "[35m[1mPUT /dbproj/auction/2?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDEyMTgsImV4cCI6MTYyMjUwMzAxOCwidXNlcm5hbWUiOiJpa2lydSJ9.dV8Cw5gPmv9MJe1vUSGM6_N6NX0fXoBCHZiok571Xao HTTP/1.1[0m" 500 -
+INFO:logger:###              DEMO: PUT /dbproj/auction/<ean>            ###
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:52:16] "PUT /dbproj/auction/2?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDEyMTgsImV4cCI6MTYyMjUwMzAxOCwidXNlcm5hbWUiOiJpa2lydSJ9.dV8Cw5gPmv9MJe1vUSGM6_N6NX0fXoBCHZiok571Xao HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/ban_user            ###
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:52:57] "[35m[1mPUT /dbproj/ban_user?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDEyMTgsImV4cCI6MTYyMjUwMzAxOCwidXNlcm5hbWUiOiJpa2lydSJ9.dV8Cw5gPmv9MJe1vUSGM6_N6NX0fXoBCHZiok571Xao HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Ikiru\\#BD\\Projeto\\Auctions.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/dbproj/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-838-552
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: PUT /dbproj/ban_user            ###
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:55:07] "[35m[1mPUT /dbproj/ban_user?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDEyMTgsImV4cCI6MTYyMjUwMzAxOCwidXNlcm5hbWUiOiJpa2lydSJ9.dV8Cw5gPmv9MJe1vUSGM6_N6NX0fXoBCHZiok571Xao HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Ikiru\\#BD\\Projeto\\Auctions.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/dbproj/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-838-552
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: PUT /dbproj/ban_user            ###
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:55:24] "[35m[1mPUT /dbproj/ban_user?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDEyMTgsImV4cCI6MTYyMjUwMzAxOCwidXNlcm5hbWUiOiJpa2lydSJ9.dV8Cw5gPmv9MJe1vUSGM6_N6NX0fXoBCHZiok571Xao HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Ikiru\\#BD\\Projeto\\Auctions.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/dbproj/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-838-552
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\Ikiru\\#BD\\Projeto\\Auctions.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/dbproj/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-838-552
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: PUT /dbproj/ban_user            ###
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:55:43] "PUT /dbproj/ban_user?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDEyMTgsImV4cCI6MTYyMjUwMzAxOCwidXNlcm5hbWUiOiJpa2lydSJ9.dV8Cw5gPmv9MJe1vUSGM6_N6NX0fXoBCHZiok571Xao HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/ban_user            ###
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 23:55:51] "PUT /dbproj/ban_user?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDEyMTgsImV4cCI6MTYyMjUwMzAxOCwidXNlcm5hbWUiOiJpa2lydSJ9.dV8Cw5gPmv9MJe1vUSGM6_N6NX0fXoBCHZiok571Xao HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/dbproj/
+
+
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/dbproj/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-838-552
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: POST /user              ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 10:06:10] "[31m[1mPOST /dbproj/user HTTP/1.1[0m" 400 -
+INFO:logger:###              DEMO: POST /user              ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 10:06:20] "[31m[1mPOST /dbproj/user HTTP/1.1[0m" 400 -
+INFO:logger:###              DEMO: POST /user              ###
+INFO:logger:---- new user added  ----
+DEBUG:logger:payload: {'username': 2, 'email': 'benfica@gmail.com', 'passwords': '1234'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 10:06:26] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
+INFO:logger:###              DEMO: POST /user              ###
+INFO:logger:---- new user added  ----
+DEBUG:logger:payload: {'username': 'Cardozo', 'email': 'benfica@gmail.com', 'passwords': '1234'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 10:06:49] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/app_stats            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 10:07:24] "GET /dbproj/app_stats?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI0ODQ5MjUsImV4cCI6MTYyMjQ4NjcyNSwidXNlcm5hbWUiOiJpa2lydSJ9.yjG92ULT-WG1bP_MsgzXbTRH-J1LmMkJqQgRgf0nbKI HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'ikiru', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('ikiru', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 10:07:32] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/app_stats            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 10:08:10] "GET /dbproj/app_stats?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1Mzg0NTIsImV4cCI6MTYyMjU0MDI1MiwidXNlcm5hbWUiOiJpa2lydSJ9.BRoXH7Ryw1oYty9_T-PQvNrtEj-6zN_yxQT7oDI3tfg HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'Cardozo', 'passwords': '1234'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 10:08:23] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/auction/<ean>            ###
+DEBUG:logger:auction: 1
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 10:23:58] "GET /dbproj/auction/1?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDA3NTUsImV4cCI6MTYyMjUwMjU1NSwidXNlcm5hbWUiOiJDYXJkb3pvIn0.gJjoTuhdOnvMJLsmzjUUdikWy1Q3nbNJKM85oRmEMPE HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'Cardozo', 'passwords': '1234'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 10:24:13] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'ikiru', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('ikiru', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 10:24:30] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/auctions              ###
+DEBUG:logger:---- users  ----
+DEBUG:logger:(2, 'Voltouuuu')
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 10:24:43] "GET /dbproj/auctions?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1Mzk0NzAsImV4cCI6MTYyMjU0MTI3MCwidXNlcm5hbWUiOiJpa2lydSJ9.WWJWsFkH3Jj8CFnzLwsfI0Gmu3pMv1g_9y-JisH0-eM HTTP/1.1" 200 -
+INFO:logger:###              /dbproj/auctions/<keyword>             ###
+DEBUG:logger:keyword: A Tatiana
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 10:24:53] "GET /dbproj/auctions/A%20Tatiana?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1Mzk0NzAsImV4cCI6MTYyMjU0MTI3MCwidXNlcm5hbWUiOiJpa2lydSJ9.WWJWsFkH3Jj8CFnzLwsfI0Gmu3pMv1g_9y-JisH0-eM HTTP/1.1" 200 -
+INFO:logger:###              /dbproj/auctions/<keyword>             ###
+DEBUG:logger:keyword: 2
+DEBUG:logger:(2, 'Voltouuuu')
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 10:25:00] "GET /dbproj/auctions/2?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1Mzk0NzAsImV4cCI6MTYyMjU0MTI3MCwidXNlcm5hbWUiOiJpa2lydSJ9.WWJWsFkH3Jj8CFnzLwsfI0Gmu3pMv1g_9y-JisH0-eM HTTP/1.1" 200 -
+INFO:logger:###              /dbproj/auctions/<keyword>             ###
+DEBUG:logger:keyword: 1
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 10:25:08] "GET /dbproj/auctions/1?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1Mzk0NzAsImV4cCI6MTYyMjU0MTI3MCwidXNlcm5hbWUiOiJpa2lydSJ9.WWJWsFkH3Jj8CFnzLwsfI0Gmu3pMv1g_9y-JisH0-eM HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/auction/<ean>            ###
+DEBUG:logger:auction: 1
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 10:25:13] "GET /dbproj/auction/1?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDA3NTUsImV4cCI6MTYyMjUwMjU1NSwidXNlcm5hbWUiOiJDYXJkb3pvIn0.gJjoTuhdOnvMJLsmzjUUdikWy1Q3nbNJKM85oRmEMPE HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/auction/<ean>            ###
+DEBUG:logger:auction: 1
+DEBUG:logger:---- selected auction  ----
+DEBUG:logger:(1, 'caneta', 40.0, 'CANCELLED', 'A tatiana queria uma caneta então está aqui :)', 'USED', datetime.datetime(2021, 6, 1, 16, 5))
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 10:25:17] "GET /dbproj/auction/1?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1Mzk0NzAsImV4cCI6MTYyMjU0MTI3MCwidXNlcm5hbWUiOiJpa2lydSJ9.WWJWsFkH3Jj8CFnzLwsfI0Gmu3pMv1g_9y-JisH0-eM HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 10:25:36] "GET /dbproj/bid/1/40?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDEyMTgsImV4cCI6MTYyMjUwMzAxOCwidXNlcm5hbWUiOiJpa2lydSJ9.dV8Cw5gPmv9MJe1vUSGM6_N6NX0fXoBCHZiok571Xao HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 1 and bidding: 40
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 10:25:41] "GET /dbproj/bid/1/40?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1Mzk0NzAsImV4cCI6MTYyMjU0MTI3MCwidXNlcm5hbWUiOiJpa2lydSJ9.WWJWsFkH3Jj8CFnzLwsfI0Gmu3pMv1g_9y-JisH0-eM HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/auction/<ean>            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 10:25:58] "PUT /dbproj/auction/1?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1Mzk0NzAsImV4cCI6MTYyMjU0MTI3MCwidXNlcm5hbWUiOiJpa2lydSJ9.WWJWsFkH3Jj8CFnzLwsfI0Gmu3pMv1g_9y-JisH0-eM HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /dbproj/<ean>/mural_message            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 10:26:06] "POST /dbproj/1/mural_message?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1Mzk0NzAsImV4cCI6MTYyMjU0MTI3MCwidXNlcm5hbWUiOiJpa2lydSJ9.WWJWsFkH3Jj8CFnzLwsfI0Gmu3pMv1g_9y-JisH0-eM HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/notification_box/<view>            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 10:26:24] "GET /dbproj/notification_box/not_read?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1Mzk0NzAsImV4cCI6MTYyMjU0MTI3MCwidXNlcm5hbWUiOiJpa2lydSJ9.WWJWsFkH3Jj8CFnzLwsfI0Gmu3pMv1g_9y-JisH0-eM HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/notification_box/<view>            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 10:26:33] "GET /dbproj/notification_box/not_read?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1Mzk0NzAsImV4cCI6MTYyMjU0MTI3MCwidXNlcm5hbWUiOiJpa2lydSJ9.WWJWsFkH3Jj8CFnzLwsfI0Gmu3pMv1g_9y-JisH0-eM HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/give_permissions/          ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 10:27:08] "PUT /dbproj/give_permissions?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1Mzk0NzAsImV4cCI6MTYyMjU0MTI3MCwidXNlcm5hbWUiOiJpa2lydSJ9.WWJWsFkH3Jj8CFnzLwsfI0Gmu3pMv1g_9y-JisH0-eM HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/give_permissions/          ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 10:27:16] "PUT /dbproj/give_permissions?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1Mzk0NzAsImV4cCI6MTYyMjU0MTI3MCwidXNlcm5hbWUiOiJpa2lydSJ9.WWJWsFkH3Jj8CFnzLwsfI0Gmu3pMv1g_9y-JisH0-eM HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/ban_user            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 10:27:23] "PUT /dbproj/ban_user?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1MDEyMTgsImV4cCI6MTYyMjUwMzAxOCwidXNlcm5hbWUiOiJpa2lydSJ9.dV8Cw5gPmv9MJe1vUSGM6_N6NX0fXoBCHZiok571Xao HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/ban_user            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 10:27:30] "PUT /dbproj/ban_user?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1Mzk0NzAsImV4cCI6MTYyMjU0MTI3MCwidXNlcm5hbWUiOiJpa2lydSJ9.WWJWsFkH3Jj8CFnzLwsfI0Gmu3pMv1g_9y-JisH0-eM HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/auction_cancellation            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 10:27:46] "PUT /dbproj/auction_cancellation?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1Mzk0NzAsImV4cCI6MTYyMjU0MTI3MCwidXNlcm5hbWUiOiJpa2lydSJ9.WWJWsFkH3Jj8CFnzLwsfI0Gmu3pMv1g_9y-JisH0-eM HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/app_stats            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 10:27:57] "GET /dbproj/app_stats?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1Mzk0NzAsImV4cCI6MTYyMjU0MTI3MCwidXNlcm5hbWUiOiJpa2lydSJ9.WWJWsFkH3Jj8CFnzLwsfI0Gmu3pMv1g_9y-JisH0-eM HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/auction/<ean>            ###
+DEBUG:logger:auction: 1
+DEBUG:logger:---- selected auction  ----
+DEBUG:logger:(1, 'caneta', 40.0, 'CANCELLED', 'A tatiana queria uma caneta então está aqui :)', 'USED', datetime.datetime(2021, 6, 1, 16, 5))
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 10:28:45] "GET /dbproj/auction/1?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1Mzk0NzAsImV4cCI6MTYyMjU0MTI3MCwidXNlcm5hbWUiOiJpa2lydSJ9.WWJWsFkH3Jj8CFnzLwsfI0Gmu3pMv1g_9y-JisH0-eM HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/ban_user            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 10:44:26] "PUT /dbproj/ban_user?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1Mzk0NzAsImV4cCI6MTYyMjU0MTI3MCwidXNlcm5hbWUiOiJpa2lydSJ9.WWJWsFkH3Jj8CFnzLwsfI0Gmu3pMv1g_9y-JisH0-eM HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'sqpo', 'passwords': '1234'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:10:40] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'sapo', 'passwords': '1234'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:10:51] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'Cardozo', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('Cardozo', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:11:08] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'joao', 'passwords': '1234'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:11:14] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'ikiru', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('ikiru', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:11:19] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/auctions              ###
+DEBUG:logger:---- users  ----
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:11:54] "GET /dbproj/auctions?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NDIyNzksImV4cCI6MTYyMjU0NDA3OSwidXNlcm5hbWUiOiJpa2lydSJ9.9gr8pyC3qimthADlxUcBkIPX-ix2stv1h4LAlt96Epc HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/auction_cancellation            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:12:09] "PUT /dbproj/auction_cancellation?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NDIyNzksImV4cCI6MTYyMjU0NDA3OSwidXNlcm5hbWUiOiJpa2lydSJ9.9gr8pyC3qimthADlxUcBkIPX-ix2stv1h4LAlt96Epc HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/<ean>/terminate_auction            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:12:16] "PUT /dbproj/4/terminate_auction HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/ban_user            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:12:35] "PUT /dbproj/ban_user?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1Mzk0NzAsImV4cCI6MTYyMjU0MTI3MCwidXNlcm5hbWUiOiJpa2lydSJ9.WWJWsFkH3Jj8CFnzLwsfI0Gmu3pMv1g_9y-JisH0-eM HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/ban_user            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:12:41] "PUT /dbproj/ban_user?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NDIyNzksImV4cCI6MTYyMjU0NDA3OSwidXNlcm5hbWUiOiJpa2lydSJ9.9gr8pyC3qimthADlxUcBkIPX-ix2stv1h4LAlt96Epc HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'alexy', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('alexy', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:13:07] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:13:29] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NDIzODcsImV4cCI6MTYyMjU0NDE4NywidXNlcm5hbWUiOiJhbGV4eSJ9.KyCIn0Sax0gKb2neTCmt52QKJgVc3SiL76StURWusPo HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:13:41] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NDIzODcsImV4cCI6MTYyMjU0NDE4NywidXNlcm5hbWUiOiJhbGV4eSJ9.KyCIn0Sax0gKb2neTCmt52QKJgVc3SiL76StURWusPo HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/notification_box/<view>            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:13:49] "GET /dbproj/notification_box/not_read?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NDIzODcsImV4cCI6MTYyMjU0NDE4NywidXNlcm5hbWUiOiJhbGV4eSJ9.KyCIn0Sax0gKb2neTCmt52QKJgVc3SiL76StURWusPo HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/notification_box/<view>            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:13:56] "GET /dbproj/notification_box/all?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NDIzODcsImV4cCI6MTYyMjU0NDE4NywidXNlcm5hbWUiOiJhbGV4eSJ9.KyCIn0Sax0gKb2neTCmt52QKJgVc3SiL76StURWusPo HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/notification_box/<view>            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:14:11] "[35m[1mGET /dbproj/notification_box/all?htoken=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NDIzODcsImV4cCI6MTYyMjU0NDE4NywidXNlcm5hbWUiOiJhbGV4eSJ9.KyCIn0Sax0gKb2neTCmt52QKJgVc3SiL76StURWusPo HTTP/1.1[0m" 500 -
+INFO:logger:###              DEMO: GET /dbproj/notification_box/<view>            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:14:16] "GET /dbproj/notification_box/all?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NDIzODcsImV4cCI6MTYyMjU0NDE4NywidXNlcm5hbWUiOiJhbGV4eSJ9.KyCIn0Sax0dgKb2neTCmt52QKJgVc3SiL76StURWusPo HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/notification_box/<view>            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:14:19] "GET /dbproj/notification_box/all?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NDIzODcsImV4cCI6MTYyMjU0NDE4NywidXNlcm5hbWUiOiJhbGV4eSJ9.KyCIn0Sax0gKb2neTCmt52QKJgVc3SiL76StURWusPo HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:14:54] "GET /dbproj/bid/1/40?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1Mzk0NzAsImV4cCI6MTYyMjU0MTI3MCwidXNlcm5hbWUiOiJpa2lydSJ9.WWJWsFkH3Jj8CFnzLwsfI0Gmu3pMv1g_9y-JisH0-eM HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 1 and bidding: 40
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:15:00] "GET /dbproj/bid/1/40?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NDIzODcsImV4cCI6MTYyMjU0NDE4NywidXNlcm5hbWUiOiJhbGV4eSJ9.KyCIn0Sax0gKb2neTCmt52QKJgVc3SiL76StURWusPo HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/auction/<ean>            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:17:15] "PUT /dbproj/auction/1?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NDIzODcsImV4cCI6MTYyMjU0NDE4NywidXNlcm5hbWUiOiJhbGV4eSJ9.KyCIn0Sax0gKb2neTCmt52QKJgVc3SiL76StURWusPo HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /auction              ###
+INFO:logger:---- new auction created ----
+DEBUG:logger:payload: {'initial_price': 2, 'title': 'livroooo', 'description': 'O manuel da esquina é um bom livro', 'condition': 'NOT SPECIFIED', 'final_date': '1/06/21 16:05:00'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:18:38] "POST /dbproj/auction?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NDIzODcsImV4cCI6MTYyMjU0NDE4NywidXNlcm5hbWUiOiJhbGV4eSJ9.KyCIn0Sax0gKb2neTCmt52QKJgVc3SiL76StURWusPo HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'ikiru', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('ikiru', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:18:52] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 1 and bidding: 40
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:19:08] "GET /dbproj/bid/1/40?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NDI3MzIsImV4cCI6MTYyMjU0NDUzMiwidXNlcm5hbWUiOiJpa2lydSJ9.Pt4AMNU0orXa-_O-rAUWn3V_rhwjD6g8U6r2_NaEH2I HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/auction/<ean>            ###
+DEBUG:logger:auction: 1
+DEBUG:logger:---- selected auction  ----
+DEBUG:logger:(1, 'livroooo', 40.0, 'ACTIVE', 'O manuel da esquina é um bom livro', 'NOT SPECIFIED', datetime.datetime(2021, 6, 1, 16, 5))
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:19:55] "GET /dbproj/auction/1?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NDI3MzIsImV4cCI6MTYyMjU0NDUzMiwidXNlcm5hbWUiOiJpa2lydSJ9.Pt4AMNU0orXa-_O-rAUWn3V_rhwjD6g8U6r2_NaEH2I HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/<ean>/terminate_auction            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:20:07] "PUT /dbproj/4/terminate_auction HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/<ean>/terminate_auction            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:20:17] "PUT /dbproj/1/terminate_auction HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/<ean>/terminate_auction            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:20:45] "PUT /dbproj/1/terminate_auction HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'sneves', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('sneves', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:21:00] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 1 and bidding: 40
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:21:11] "GET /dbproj/bid/1/40?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NDI4NjAsImV4cCI6MTYyMjU0NDY2MCwidXNlcm5hbWUiOiJzbmV2ZXMifQ.Ka-jk1i295Os7obIO5Ef2CtLCshDWfzK2Thqg9VanIc HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 1 and bidding: 50
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:21:16] "GET /dbproj/bid/1/50?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NDI4NjAsImV4cCI6MTYyMjU0NDY2MCwidXNlcm5hbWUiOiJzbmV2ZXMifQ.Ka-jk1i295Os7obIO5Ef2CtLCshDWfzK2Thqg9VanIc HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 1 and bidding: 60
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:21:24] "GET /dbproj/bid/1/60?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NDI4NjAsImV4cCI6MTYyMjU0NDY2MCwidXNlcm5hbWUiOiJzbmV2ZXMifQ.Ka-jk1i295Os7obIO5Ef2CtLCshDWfzK2Thqg9VanIc HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /auction              ###
+INFO:logger:---- new auction created ----
+DEBUG:logger:payload: {'initial_price': 20, 'title': '20', 'description': 'Um 20 a BD quem me dera', 'condition': 'NEW', 'final_date': '1/06/21 16:05:00'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:22:03] "POST /dbproj/auction?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NDI4NjAsImV4cCI6MTYyMjU0NDY2MCwidXNlcm5hbWUiOiJzbmV2ZXMifQ.Ka-jk1i295Os7obIO5Ef2CtLCshDWfzK2Thqg9VanIc HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'fakemarvel', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('fakemarvel', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:22:07] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 1 and bidding: 60
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:22:16] "GET /dbproj/bid/1/60?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NDI5MjcsImV4cCI6MTYyMjU0NDcyNywidXNlcm5hbWUiOiJmYWtlbWFydmVsIn0.EO3sudv_h0b4cyS3Qarh5h83NdNz1LGRvqFNeA8YAbk HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 1 and bidding: 100
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:22:22] "GET /dbproj/bid/1/100?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NDI5MjcsImV4cCI6MTYyMjU0NDcyNywidXNlcm5hbWUiOiJmYWtlbWFydmVsIn0.EO3sudv_h0b4cyS3Qarh5h83NdNz1LGRvqFNeA8YAbk HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /dbproj/<ean>/mural_message            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:22:42] "POST /dbproj/1/mural_message?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NDI5MjcsImV4cCI6MTYyMjU0NDcyNywidXNlcm5hbWUiOiJmYWtlbWFydmVsIn0.EO3sudv_h0b4cyS3Qarh5h83NdNz1LGRvqFNeA8YAbk HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'ikiru', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('ikiru', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:22:52] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/ban_user            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:23:15] "PUT /dbproj/ban_user?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NDI5NzIsImV4cCI6MTYyMjU0NDc3MiwidXNlcm5hbWUiOiJpa2lydSJ9.3QvNhpbFqgSjTnjLwHkGQROjYK-0x-lohK8H-WodTWs HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 1 and bidding: 100
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:23:21] "GET /dbproj/bid/1/100?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NDI5MjcsImV4cCI6MTYyMjU0NDcyNywidXNlcm5hbWUiOiJmYWtlbWFydmVsIn0.EO3sudv_h0b4cyS3Qarh5h83NdNz1LGRvqFNeA8YAbk HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/auction/<ean>            ###
+DEBUG:logger:auction: 1
+DEBUG:logger:---- selected auction  ----
+DEBUG:logger:(1, 'livroooo', 100.0, 'CANCELLED', 'O manuel da esquina é um bom livro', 'NOT SPECIFIED', datetime.datetime(2021, 6, 1, 16, 5))
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:23:33] "GET /dbproj/auction/1?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NDI5NzIsImV4cCI6MTYyMjU0NDc3MiwidXNlcm5hbWUiOiJpa2lydSJ9.3QvNhpbFqgSjTnjLwHkGQROjYK-0x-lohK8H-WodTWs HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/ban_user            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:23:56] "PUT /dbproj/ban_user?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NDI5NzIsImV4cCI6MTYyMjU0NDc3MiwidXNlcm5hbWUiOiJpa2lydSJ9.3QvNhpbFqgSjTnjLwHkGQROjYK-0x-lohK8H-WodTWs HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/auction/<ean>            ###
+DEBUG:logger:auction: 1
+DEBUG:logger:---- selected auction  ----
+DEBUG:logger:(1, 'livroooo', 50.0, 'CANCELLED', 'O manuel da esquina é um bom livro', 'NOT SPECIFIED', datetime.datetime(2021, 6, 1, 16, 5))
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:24:01] "GET /dbproj/auction/1?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NDI5NzIsImV4cCI6MTYyMjU0NDc3MiwidXNlcm5hbWUiOiJpa2lydSJ9.3QvNhpbFqgSjTnjLwHkGQROjYK-0x-lohK8H-WodTWs HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/notification_box/<view>            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:24:33] "GET /dbproj/notification_box/all?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NDI5NzIsImV4cCI6MTYyMjU0NDc3MiwidXNlcm5hbWUiOiJpa2lydSJ9.3QvNhpbFqgSjTnjLwHkGQROjYK-0x-lohK8H-WodTWs HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/notification_box/<view>            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:24:48] "GET /dbproj/notification_box/not_read?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NDI5NzIsImV4cCI6MTYyMjU0NDc3MiwidXNlcm5hbWUiOiJpa2lydSJ9.3QvNhpbFqgSjTnjLwHkGQROjYK-0x-lohK8H-WodTWs HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/notification_box/<view>            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 11:24:53] "GET /dbproj/notification_box/all?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NDI5NzIsImV4cCI6MTYyMjU0NDc3MiwidXNlcm5hbWUiOiJpa2lydSJ9.3QvNhpbFqgSjTnjLwHkGQROjYK-0x-lohK8H-WodTWs HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/dbproj/
+
+
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/dbproj/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-838-552
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'ikiru', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('ikiru', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 12:10:51] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/app_stats            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 12:11:00] "GET /dbproj/app_stats?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NDU4NTEsImV4cCI6MTYyMjU0NzY1MSwidXNlcm5hbWUiOiJpa2lydSJ9._55JHiVgwOEphjzrGpZNWwRB1PbJu71FXxxFddGhCao HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/dbproj/
+
+
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/dbproj/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-838-552
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: POST /user              ###
+INFO:logger:---- new user added  ----
+DEBUG:logger:payload: {'username': 'Cardozo', 'email': 'benfica@gmail.com', 'passwords': '1234'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 14:50:42] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'Cardozo', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('Cardozo', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 14:50:55] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /user              ###
+INFO:logger:---- new user added  ----
+DEBUG:logger:payload: {'username': 'Cardozo', 'email': 'benfica@gmail.com', 'passwords': '1234'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 14:54:42] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /user              ###
+INFO:logger:---- new user added  ----
+DEBUG:logger:payload: {'username': 'BD', 'email': 'bddefesa@gmail.com', 'passwords': '1234'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 14:54:57] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'bd', 'passwords': '1234'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 14:55:55] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'BD', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('BD', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 14:56:02] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /auction              ###
+INFO:logger:---- new auction created ----
+DEBUG:logger:payload: {'initial_price': 20, 'title': 'livroooo', 'description': 'O manuel da esquina é um bom livro', 'condition': 'NEW', 'final_date': '1/06/21 16:05:00'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 14:56:50] "POST /dbproj/auction?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTU3NjIsImV4cCI6MTYyMjU1NzU2MiwidXNlcm5hbWUiOiJCRCJ9.kUsxSYq3x0y-mvzC3CzWyPpkiQxID6FtSXowy_ddmxI HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/auctions              ###
+DEBUG:logger:---- users  ----
+DEBUG:logger:(1, 'O manuel da esquina é um bom livro')
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 14:57:13] "GET /dbproj/auctions?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTU3NjIsImV4cCI6MTYyMjU1NzU2MiwidXNlcm5hbWUiOiJCRCJ9.kUsxSYq3x0y-mvzC3CzWyPpkiQxID6FtSXowy_ddmxI HTTP/1.1" 200 -
+INFO:logger:###              /dbproj/auctions/<keyword>             ###
+DEBUG:logger:keyword: 1
+DEBUG:logger:(1, 'O manuel da esquina é um bom livro')
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 14:57:42] "GET /dbproj/auctions/1?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTU3NjIsImV4cCI6MTYyMjU1NzU2MiwidXNlcm5hbWUiOiJCRCJ9.kUsxSYq3x0y-mvzC3CzWyPpkiQxID6FtSXowy_ddmxI HTTP/1.1" 200 -
+INFO:logger:###              /dbproj/auctions/<keyword>             ###
+DEBUG:logger:keyword: O manuel
+DEBUG:logger:(1, 'O manuel da esquina é um bom livro')
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 14:57:48] "GET /dbproj/auctions/O%20manuel?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTU3NjIsImV4cCI6MTYyMjU1NzU2MiwidXNlcm5hbWUiOiJCRCJ9.kUsxSYq3x0y-mvzC3CzWyPpkiQxID6FtSXowy_ddmxI HTTP/1.1" 200 -
+INFO:logger:###              /dbproj/auctions/<keyword>             ###
+DEBUG:logger:keyword: wewl
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 14:57:56] "GET /dbproj/auctions/wewl?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTU3NjIsImV4cCI6MTYyMjU1NzU2MiwidXNlcm5hbWUiOiJCRCJ9.kUsxSYq3x0y-mvzC3CzWyPpkiQxID6FtSXowy_ddmxI HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/auction/<ean>            ###
+DEBUG:logger:auction: 1
+DEBUG:logger:---- selected auction  ----
+DEBUG:logger:(1, 'livroooo', 20.0, 'ACTIVE', 'O manuel da esquina é um bom livro', 'NEW', datetime.datetime(2021, 6, 1, 16, 5))
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 14:58:13] "GET /dbproj/auction/1?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTU3NjIsImV4cCI6MTYyMjU1NzU2MiwidXNlcm5hbWUiOiJCRCJ9.kUsxSYq3x0y-mvzC3CzWyPpkiQxID6FtSXowy_ddmxI HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 1 and bidding: 100
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 14:58:48] "GET /dbproj/bid/1/100?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTU3NjIsImV4cCI6MTYyMjU1NzU2MiwidXNlcm5hbWUiOiJCRCJ9.kUsxSYq3x0y-mvzC3CzWyPpkiQxID6FtSXowy_ddmxI HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 14:59:24] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTU3NjIsImV4cCI6MTYyMjU1NzU2MiwidXNlcm5hbWUiOiJCRCJ9.kUsxSYq3x0y-mvzC3CzWyPpkiQxID6FtSXowy_ddmxI HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 14:59:43] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTU3NjIsImV4cCI6MTYyMjU1NzU2MiwidXNlcm5hbWUiOiJCRCJ9.kUsxSYq3x0y-mvzC3CzWyPpkiQxID6FtSXowy_ddmxI HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:00:21] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTU3NjIsImV4cCI6MTYyMjU1NzU2MiwidXNlcm5hbWUiOiJCRCJ9.kUsxSYq3x0y-mvzC3CzWyPpkiQxID6FtSXowy_ddmxI HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/auctions              ###
+DEBUG:logger:---- users  ----
+DEBUG:logger:(1, 'O manuel da esquina é um bom livro')
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:00:30] "GET /dbproj/auctions?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTU3NjIsImV4cCI6MTYyMjU1NzU2MiwidXNlcm5hbWUiOiJCRCJ9.kUsxSYq3x0y-mvzC3CzWyPpkiQxID6FtSXowy_ddmxI HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'BD', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('BD', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:01:57] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:02:07] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTYxMTcsImV4cCI6MTYyMjU1NzkxNywidXNlcm5hbWUiOiJCRCJ9.19yuCZB0v5gib0Rcp_RcD9AFBbHdsrIhty6VDOo6pyw HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Ikiru\\#BD\\Projeto\\Auctions.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/dbproj/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-838-552
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'ikiru', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('ikiru', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:06:16] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /auction              ###
+INFO:logger:---- new auction created ----
+DEBUG:logger:payload: {'initial_price': 20, 'title': 'livroooo', 'description': 'O manuel da esquina é um bom livro', 'condition': 'NEW', 'final_date': '1/06/21 16:05:00'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:06:26] "POST /dbproj/auction?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTU3NjIsImV4cCI6MTYyMjU1NzU2MiwidXNlcm5hbWUiOiJCRCJ9.kUsxSYq3x0y-mvzC3CzWyPpkiQxID6FtSXowy_ddmxI HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'BD', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('BD', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:06:31] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 1 and bidding: 100
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:06:45] "GET /dbproj/bid/1/100?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTYzOTEsImV4cCI6MTYyMjU1ODE5MSwidXNlcm5hbWUiOiJCRCJ9.RUAqv06rOU1ATdWLK8b5yDDSu4ZFNaxAl6eavuVrEP8 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:06:54] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTYxMTcsImV4cCI6MTYyMjU1NzkxNywidXNlcm5hbWUiOiJCRCJ9.19yuCZB0v5gib0Rcp_RcD9AFBbHdsrIhty6VDOo6pyw HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:07:00] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTYzOTEsImV4cCI6MTYyMjU1ODE5MSwidXNlcm5hbWUiOiJCRCJ9.RUAqv06rOU1ATdWLK8b5yDDSu4ZFNaxAl6eavuVrEP8 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 2 and bidding: 100
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:07:11] "GET /dbproj/bid/2/100?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTYzOTEsImV4cCI6MTYyMjU1ODE5MSwidXNlcm5hbWUiOiJCRCJ9.RUAqv06rOU1ATdWLK8b5yDDSu4ZFNaxAl6eavuVrEP8 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 2 and bidding: 100
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:07:27] "GET /dbproj/bid/2/100?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTYzOTEsImV4cCI6MTYyMjU1ODE5MSwidXNlcm5hbWUiOiJCRCJ9.RUAqv06rOU1ATdWLK8b5yDDSu4ZFNaxAl6eavuVrEP8 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'BD', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('BD', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:07:46] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 2 and bidding: 100
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:07:53] "GET /dbproj/bid/2/100?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTY0NjYsImV4cCI6MTYyMjU1ODI2NiwidXNlcm5hbWUiOiJCRCJ9.wclA8stshH32SdodQZ3veQcrUuDJD9obsK-8fv5h2e4 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:08:25] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTYzOTEsImV4cCI6MTYyMjU1ODE5MSwidXNlcm5hbWUiOiJCRCJ9.RUAqv06rOU1ATdWLK8b5yDDSu4ZFNaxAl6eavuVrEP8 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'ikiru', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('ikiru', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:08:30] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /auction              ###
+INFO:logger:---- new auction created ----
+DEBUG:logger:payload: {'initial_price': 20, 'title': 'livroooo', 'description': 'O manuel da esquina é um bom livro', 'condition': 'NEW', 'final_date': '1/06/21 16:05:00'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:08:39] "POST /dbproj/auction?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTY1MTAsImV4cCI6MTYyMjU1ODMxMCwidXNlcm5hbWUiOiJpa2lydSJ9.MWEMG3E_ZT2KKWxNT3V_7IaGc4ZkeIruyuYDPR1qdXw HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 3 and bidding: 100
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:08:48] "GET /dbproj/bid/3/100?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTY0NjYsImV4cCI6MTYyMjU1ODI2NiwidXNlcm5hbWUiOiJCRCJ9.wclA8stshH32SdodQZ3veQcrUuDJD9obsK-8fv5h2e4 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+DEBUG:logger:(1, 'O manuel da esquina é um bom livro')
+DEBUG:logger:(2, 'O manuel da esquina é um bom livro')
+DEBUG:logger:(3, 'O manuel da esquina é um bom livro')
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:08:53] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTYzOTEsImV4cCI6MTYyMjU1ODE5MSwidXNlcm5hbWUiOiJCRCJ9.RUAqv06rOU1ATdWLK8b5yDDSu4ZFNaxAl6eavuVrEP8 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'alexy', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('alexy', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:11:21] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+DEBUG:logger:(1, 'O manuel da esquina é um bom livro')
+DEBUG:logger:(2, 'O manuel da esquina é um bom livro')
+DEBUG:logger:(3, 'O manuel da esquina é um bom livro')
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:11:36] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTYzOTEsImV4cCI6MTYyMjU1ODE5MSwidXNlcm5hbWUiOiJCRCJ9.RUAqv06rOU1ATdWLK8b5yDDSu4ZFNaxAl6eavuVrEP8 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:11:44] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTY2ODEsImV4cCI6MTYyMjU1ODQ4MSwidXNlcm5hbWUiOiJhbGV4eSJ9.vRsG3BuOtIWG0uUTXXLLKtZ4HsXrK2T3bvqjpmbLDHs HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /auction              ###
+INFO:logger:---- new auction created ----
+DEBUG:logger:payload: {'initial_price': 20, 'title': 'livroooo', 'description': 'O manuel da esquina é um bom livro', 'condition': 'NEW', 'final_date': '1/06/21 16:05:00'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:11:56] "POST /dbproj/auction?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTY1MTAsImV4cCI6MTYyMjU1ODMxMCwidXNlcm5hbWUiOiJpa2lydSJ9.MWEMG3E_ZT2KKWxNT3V_7IaGc4ZkeIruyuYDPR1qdXw HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:11:59] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTY2ODEsImV4cCI6MTYyMjU1ODQ4MSwidXNlcm5hbWUiOiJhbGV4eSJ9.vRsG3BuOtIWG0uUTXXLLKtZ4HsXrK2T3bvqjpmbLDHs HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Ikiru\\#BD\\Projeto\\Auctions.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/dbproj/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-838-552
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:13:14] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTY2ODEsImV4cCI6MTYyMjU1ODQ4MSwidXNlcm5hbWUiOiJhbGV4eSJ9.vRsG3BuOtIWG0uUTXXLLKtZ4HsXrK2T3bvqjpmbLDHs HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Ikiru\\#BD\\Projeto\\Auctions.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/dbproj/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-838-552
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\Ikiru\\#BD\\Projeto\\Auctions.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/dbproj/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-838-552
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\Ikiru\\#BD\\Projeto\\Auctions.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/dbproj/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-838-552
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:13:39] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTY2ODEsImV4cCI6MTYyMjU1ODQ4MSwidXNlcm5hbWUiOiJhbGV4eSJ9.vRsG3BuOtIWG0uUTXXLLKtZ4HsXrK2T3bvqjpmbLDHs HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Ikiru\\#BD\\Projeto\\Auctions.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/dbproj/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-838-552
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\Ikiru\\#BD\\Projeto\\Auctions.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/dbproj/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-838-552
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:14:46] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTY2ODEsImV4cCI6MTYyMjU1ODQ4MSwidXNlcm5hbWUiOiJhbGV4eSJ9.vRsG3BuOtIWG0uUTXXLLKtZ4HsXrK2T3bvqjpmbLDHs HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Ikiru\\#BD\\Projeto\\Auctions.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/dbproj/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-838-552
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/dbproj/
+
+
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/dbproj/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-838-552
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'BD', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('BD', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:17:01] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/auction/<ean>            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:17:12] "PUT /dbproj/auction/1?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTcwMjEsImV4cCI6MTYyMjU1ODgyMSwidXNlcm5hbWUiOiJCRCJ9.-vmJtmCOr5eSsUO3X1bqAy81sypiw3rURVqwS8VfPzE HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/auction/<ean>            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:17:20] "PUT /dbproj/auction/3?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTcwMjEsImV4cCI6MTYyMjU1ODgyMSwidXNlcm5hbWUiOiJCRCJ9.-vmJtmCOr5eSsUO3X1bqAy81sypiw3rURVqwS8VfPzE HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /dbproj/<ean>/mural_message            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:19:55] "POST /dbproj/1/mural_message?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTcwMjEsImV4cCI6MTYyMjU1ODgyMSwidXNlcm5hbWUiOiJCRCJ9.-vmJtmCOr5eSsUO3X1bqAy81sypiw3rURVqwS8VfPzE HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/give_permissions/          ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:20:35] "PUT /dbproj/give_permissions?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTcwMjEsImV4cCI6MTYyMjU1ODgyMSwidXNlcm5hbWUiOiJCRCJ9.-vmJtmCOr5eSsUO3X1bqAy81sypiw3rURVqwS8VfPzE HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'ikiru', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('ikiru', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:20:44] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/give_permissions/          ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:20:53] "PUT /dbproj/give_permissions?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTcwMjEsImV4cCI6MTYyMjU1ODgyMSwidXNlcm5hbWUiOiJCRCJ9.-vmJtmCOr5eSsUO3X1bqAy81sypiw3rURVqwS8VfPzE HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/give_permissions/          ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:21:06] "PUT /dbproj/give_permissions?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTcyNDQsImV4cCI6MTYyMjU1OTA0NCwidXNlcm5hbWUiOiJpa2lydSJ9.FTtkMyAmF-ei0opLnivtJzdEDu7WB1PbDRADqqUhhxg HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'sneves', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('sneves', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:21:43] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/auction_cancellation            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:22:22] "PUT /dbproj/auction_cancellation?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTczMDMsImV4cCI6MTYyMjU1OTEwMywidXNlcm5hbWUiOiJzbmV2ZXMifQ.rHAlAon3nLsMIxP5ej0EDT4SF0J41Z6d_INCcdVJUpc HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/notification_box/<view>            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:23:29] "GET /dbproj/notification_box/not_read?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTczMDMsImV4cCI6MTYyMjU1OTEwMywidXNlcm5hbWUiOiJzbmV2ZXMifQ.rHAlAon3nLsMIxP5ej0EDT4SF0J41Z6d_INCcdVJUpc HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/notification_box/<view>            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:23:35] "GET /dbproj/notification_box/all?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTczMDMsImV4cCI6MTYyMjU1OTEwMywidXNlcm5hbWUiOiJzbmV2ZXMifQ.rHAlAon3nLsMIxP5ej0EDT4SF0J41Z6d_INCcdVJUpc HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/ban_user            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:23:52] "PUT /dbproj/ban_user?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTczMDMsImV4cCI6MTYyMjU1OTEwMywidXNlcm5hbWUiOiJzbmV2ZXMifQ.rHAlAon3nLsMIxP5ej0EDT4SF0J41Z6d_INCcdVJUpc HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/app_stats            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:27:29] "GET /dbproj/app_stats?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTczMDMsImV4cCI6MTYyMjU1OTEwMywidXNlcm5hbWUiOiJzbmV2ZXMifQ.rHAlAon3nLsMIxP5ej0EDT4SF0J41Z6d_INCcdVJUpc HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:27:50] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTczMDMsImV4cCI6MTYyMjU1OTEwMywidXNlcm5hbWUiOiJzbmV2ZXMifQ.rHAlAon3nLsMIxP5ej0EDT4SF0J41Z6d_INCcdVJUpc HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/auctions              ###
+DEBUG:logger:---- users  ----
+DEBUG:logger:(2, 'O manuel da esquina é um bom livro')
+DEBUG:logger:(3, 'O manuel da esquina é um bom livro')
+DEBUG:logger:(4, 'O manuel da esquina é um bom livro')
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:28:08] "GET /dbproj/auctions?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTczMDMsImV4cCI6MTYyMjU1OTEwMywidXNlcm5hbWUiOiJzbmV2ZXMifQ.rHAlAon3nLsMIxP5ej0EDT4SF0J41Z6d_INCcdVJUpc HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'sneves', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('sneves', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:34:27] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /auction              ###
+INFO:logger:---- new auction created ----
+DEBUG:logger:payload: {'initial_price': 20, 'title': 'Brinquedo', 'description': 'Brinquedo do toy story', 'condition': 'NEW', 'final_date': '1/06/21 16:05:00'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:35:12] "POST /dbproj/auction?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTgwNjcsImV4cCI6MTYyMjU1OTg2NywidXNlcm5hbWUiOiJzbmV2ZXMifQ.KT7qJAzOb_RqyNtw5rmP8OO9tfiRGx304LJYrxeANSU HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'fakemarvel', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('fakemarvel', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:36:00] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /auction              ###
+INFO:logger:---- new auction created ----
+DEBUG:logger:payload: {'initial_price': 20, 'title': 'Livro', 'description': 'Livro da vida', 'condition': 'NEW', 'final_date': '2/06/21 15:05:00'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:36:28] "POST /dbproj/auction?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTgwNjcsImV4cCI6MTYyMjU1OTg2NywidXNlcm5hbWUiOiJzbmV2ZXMifQ.KT7qJAzOb_RqyNtw5rmP8OO9tfiRGx304LJYrxeANSU HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'ikiru', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('ikiru', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:36:43] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 2 and bidding: 50
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:37:21] "GET /dbproj/bid/2/50?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTgyMDMsImV4cCI6MTYyMjU2MDAwMywidXNlcm5hbWUiOiJpa2lydSJ9.22Mys4TdUKix9hi-6iAyhWNsWWMNrCuUr4CwzMdDFRY HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'sneves', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('sneves', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:37:30] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+DEBUG:logger:(1, 'Brinquedo do toy story')
+DEBUG:logger:(2, 'Livro da vida')
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:37:39] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTczMDMsImV4cCI6MTYyMjU1OTEwMywidXNlcm5hbWUiOiJzbmV2ZXMifQ.rHAlAon3nLsMIxP5ej0EDT4SF0J41Z6d_INCcdVJUpc HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+DEBUG:logger:(1, 'Brinquedo do toy story')
+DEBUG:logger:(2, 'Livro da vida')
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:39:19] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTgyNTAsImV4cCI6MTYyMjU2MDA1MCwidXNlcm5hbWUiOiJzbmV2ZXMifQ.zSbraLRNeM7h4dojhwTOeIt2hV6yanAg5GZGFbYQ0kc HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'ikiru', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('ikiru', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:42:21] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'fakemarvel', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('fakemarvel', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:42:26] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /auction              ###
+INFO:logger:---- new auction created ----
+DEBUG:logger:payload: {'initial_price': 20, 'title': 'Livro', 'description': 'Livro da vida', 'condition': 'NEW', 'final_date': '2/06/21 15:05:00'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:42:40] "POST /dbproj/auction?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTg1NDYsImV4cCI6MTYyMjU2MDM0NiwidXNlcm5hbWUiOiJmYWtlbWFydmVsIn0.blEDJvaUh9YsB_GfKadhhPnfT5p9L3llFF_Xe-Zkvq0 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'sneves', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('sneves', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:42:52] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+DEBUG:logger:(1, 'Brinquedo do toy story')
+DEBUG:logger:(2, 'Livro da vida')
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:43:06] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTg1NzIsImV4cCI6MTYyMjU2MDM3MiwidXNlcm5hbWUiOiJzbmV2ZXMifQ.zwOvcpDZ8YoxU53QGZPsL-dFa0SSc6j2rhWIxho780w HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:44:31] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTg1NzIsImV4cCI6MTYyMjU2MDM3MiwidXNlcm5hbWUiOiJzbmV2ZXMifQ.zwOvcpDZ8YoxU53QGZPsL-dFa0SSc6j2rhWIxho780w HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /auction              ###
+INFO:logger:---- new auction created ----
+DEBUG:logger:payload: {'initial_price': 20, 'title': 'Livro', 'description': 'Livro da vida', 'condition': 'NEW', 'final_date': '2/06/21 15:05:00'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:44:44] "POST /dbproj/auction?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTg1NzIsImV4cCI6MTYyMjU2MDM3MiwidXNlcm5hbWUiOiJzbmV2ZXMifQ.zwOvcpDZ8YoxU53QGZPsL-dFa0SSc6j2rhWIxho780w HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:44:50] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTg1NzIsImV4cCI6MTYyMjU2MDM3MiwidXNlcm5hbWUiOiJzbmV2ZXMifQ.zwOvcpDZ8YoxU53QGZPsL-dFa0SSc6j2rhWIxho780w HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:45:11] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTg1NzIsImV4cCI6MTYyMjU2MDM3MiwidXNlcm5hbWUiOiJzbmV2ZXMifQ.zwOvcpDZ8YoxU53QGZPsL-dFa0SSc6j2rhWIxho780w HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /auction              ###
+INFO:logger:---- new auction created ----
+DEBUG:logger:payload: {'initial_price': 20, 'title': 'Livro', 'description': 'Livro da vida', 'condition': 'NEW', 'final_date': '2/06/21 15:05:00'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:45:21] "POST /dbproj/auction?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTg1NzIsImV4cCI6MTYyMjU2MDM3MiwidXNlcm5hbWUiOiJzbmV2ZXMifQ.zwOvcpDZ8YoxU53QGZPsL-dFa0SSc6j2rhWIxho780w HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:45:26] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTg1NzIsImV4cCI6MTYyMjU2MDM3MiwidXNlcm5hbWUiOiJzbmV2ZXMifQ.zwOvcpDZ8YoxU53QGZPsL-dFa0SSc6j2rhWIxho780w HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'ikiru', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('ikiru', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:45:52] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 2 and bidding: 50
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:46:14] "GET /dbproj/bid/2/50?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTg3NTIsImV4cCI6MTYyMjU2MDU1MiwidXNlcm5hbWUiOiJpa2lydSJ9.3a7AT9hsrviws8IVblbwfcq2A_GE4bKs5G1UYyIUyxM HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+DEBUG:logger:(1, 'Livro da vida')
+DEBUG:logger:(2, 'Livro da vida')
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:46:18] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTg1NzIsImV4cCI6MTYyMjU2MDM3MiwidXNlcm5hbWUiOiJzbmV2ZXMifQ.zwOvcpDZ8YoxU53QGZPsL-dFa0SSc6j2rhWIxho780w HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'ikiru', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('ikiru', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:48:05] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'sneves', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('sneves', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:48:16] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /auction              ###
+INFO:logger:---- new auction created ----
+DEBUG:logger:payload: {'initial_price': 20, 'title': 'Livro', 'description': 'Livro da vida', 'condition': 'NEW', 'final_date': '2/06/21 15:05:00'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:48:36] "POST /dbproj/auction?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTg4OTYsImV4cCI6MTYyMjU2MDY5NiwidXNlcm5hbWUiOiJzbmV2ZXMifQ.klamc4Bs-AvOyrrk5Ww8DDCSvZe04rVZy3b9Se06eaQ HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'ikiru', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('ikiru', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:48:48] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /auction              ###
+INFO:logger:---- new auction created ----
+DEBUG:logger:payload: {'initial_price': 20, 'title': 'Caneta', 'description': 'Caneta do aço', 'condition': 'NEW', 'final_date': '2/06/21 15:05:00'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:49:08] "POST /dbproj/auction?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTg5MjgsImV4cCI6MTYyMjU2MDcyOCwidXNlcm5hbWUiOiJpa2lydSJ9.OfGr37pcDCskChNyukSr3RUPizwcOUlhxD-Sy7yUNrw HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'fakemarvel', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('fakemarvel', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:49:15] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /auction              ###
+INFO:logger:---- new auction created ----
+DEBUG:logger:payload: {'initial_price': 30, 'title': 'camisola desporto', 'description': 'Camisola do Benfica', 'condition': 'NEW', 'final_date': '2/06/21 15:05:00'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:49:59] "POST /dbproj/auction?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTg5NTUsImV4cCI6MTYyMjU2MDc1NSwidXNlcm5hbWUiOiJmYWtlbWFydmVsIn0.TICwhVN8yVYBcz7F8nFVmlWUjQn0EkwtUbF1RrIIp-M HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'sneves', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('sneves', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:50:15] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /auction              ###
+INFO:logger:---- new auction created ----
+DEBUG:logger:payload: {'initial_price': 10, 'title': 'camisola desporto', 'description': 'Camisola da Académica', 'condition': 'USED', 'final_date': '2/07/21 15:05:00'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:50:49] "POST /dbproj/auction?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTkwMTUsImV4cCI6MTYyMjU2MDgxNSwidXNlcm5hbWUiOiJzbmV2ZXMifQ.gP0_3f0ab9DFIKCvEktF8MOhlbuXSVnuVTYjKsmaBr4 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'alexy', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('alexy', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:50:58] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'alexy', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('alexy', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:51:38] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /auction              ###
+INFO:logger:---- new auction created ----
+DEBUG:logger:payload: {'initial_price': 1, 'title': 'A mãe da Sofia', 'description': 'Olá estou farta da minha mãe, levem-na, preço negociável entre os 0 e o 1 euro', 'condition': 'VERY USED', 'final_date': '2/07/21 15:05:00'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:53:19] "POST /dbproj/auction?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTkwMTUsImV4cCI6MTYyMjU2MDgxNSwidXNlcm5hbWUiOiJzbmV2ZXMifQ.gP0_3f0ab9DFIKCvEktF8MOhlbuXSVnuVTYjKsmaBr4 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /auction              ###
+INFO:logger:---- new auction created ----
+DEBUG:logger:payload: {'initial_price': 50, 'title': 'impressora', 'description': 'Comprei uma nova, estou a leiloar esta x)', 'condition': 'USED', 'final_date': '2/07/21 15:05:00'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:54:04] "POST /dbproj/auction?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTkwMTUsImV4cCI6MTYyMjU2MDgxNSwidXNlcm5hbWUiOiJzbmV2ZXMifQ.gP0_3f0ab9DFIKCvEktF8MOhlbuXSVnuVTYjKsmaBr4 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:54:32] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTkwOTgsImV4cCI6MTYyMjU2MDg5OCwidXNlcm5hbWUiOiJhbGV4eSJ9.5mB2p0KDZXGtQghSJDnBcTdUuC8Hs07Y8YipJiSzeL0 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:54:37] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTkwOTgsImV4cCI6MTYyMjU2MDg5OCwidXNlcm5hbWUiOiJhbGV4eSJ9.5mB2p0KDZXGtQghSJDnBcTdUuC8Hs07Y8YipJiSzeL0 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'alexy', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('alexy', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:54:41] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 4 and bidding: 50
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:55:02] "GET /dbproj/bid/4/50?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTkyODEsImV4cCI6MTYyMjU2MTA4MSwidXNlcm5hbWUiOiJhbGV4eSJ9.FPSzQxB0TeZWHOn23FAyI9sYvqJhWcEhWN9WOv14G-4 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+DEBUG:logger:(4, 'Camisola da Académica')
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:55:06] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTkwOTgsImV4cCI6MTYyMjU2MDg5OCwidXNlcm5hbWUiOiJhbGV4eSJ9.5mB2p0KDZXGtQghSJDnBcTdUuC8Hs07Y8YipJiSzeL0 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'sneves', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('sneves', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:55:26] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+DEBUG:logger:(4, 'Camisola da Académica')
+DEBUG:logger:(1, 'Livro da vida')
+DEBUG:logger:(5, 'Comprei uma nova, estou a leiloar esta x)')
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:55:42] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTkzMjYsImV4cCI6MTYyMjU2MTEyNiwidXNlcm5hbWUiOiJzbmV2ZXMifQ.F1oGHKMUBa0Y9KV0kAw9CEXDuQvegTMXNTzi_LkCb_E HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 4 and bidding: 50
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:56:18] "GET /dbproj/bid/4/50?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTkzMjYsImV4cCI6MTYyMjU2MTEyNiwidXNlcm5hbWUiOiJzbmV2ZXMifQ.F1oGHKMUBa0Y9KV0kAw9CEXDuQvegTMXNTzi_LkCb_E HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 3 and bidding: 50
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:56:24] "GET /dbproj/bid/3/50?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTkzMjYsImV4cCI6MTYyMjU2MTEyNiwidXNlcm5hbWUiOiJzbmV2ZXMifQ.F1oGHKMUBa0Y9KV0kAw9CEXDuQvegTMXNTzi_LkCb_E HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'ikiru', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('ikiru', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:57:03] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 3 and bidding: 50
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:57:14] "GET /dbproj/bid/3/50?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTk0MjMsImV4cCI6MTYyMjU2MTIyMywidXNlcm5hbWUiOiJpa2lydSJ9.wggyXuhoSXfd7jB1x300SFELjxa7P0EeTkxkIjj9VeM HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 3 and bidding: 70
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:57:20] "GET /dbproj/bid/3/70?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTk0MjMsImV4cCI6MTYyMjU2MTIyMywidXNlcm5hbWUiOiJpa2lydSJ9.wggyXuhoSXfd7jB1x300SFELjxa7P0EeTkxkIjj9VeM HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 2 and bidding: 70
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:58:10] "GET /dbproj/bid/2/70?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTk0MjMsImV4cCI6MTYyMjU2MTIyMywidXNlcm5hbWUiOiJpa2lydSJ9.wggyXuhoSXfd7jB1x300SFELjxa7P0EeTkxkIjj9VeM HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 1 and bidding: 70
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:58:16] "GET /dbproj/bid/1/70?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTk0MjMsImV4cCI6MTYyMjU2MTIyMywidXNlcm5hbWUiOiJpa2lydSJ9.wggyXuhoSXfd7jB1x300SFELjxa7P0EeTkxkIjj9VeM HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+DEBUG:logger:(1, 'Livro da vida')
+DEBUG:logger:(3, 'Camisola do Benfica')
+DEBUG:logger:(2, 'Caneta do aço')
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:58:24] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTk0MjMsImV4cCI6MTYyMjU2MTIyMywidXNlcm5hbWUiOiJpa2lydSJ9.wggyXuhoSXfd7jB1x300SFELjxa7P0EeTkxkIjj9VeM HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'sapo', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('sapo', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 15:59:38] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/auction/<ean>            ###
+DEBUG:logger:auction: 1
+DEBUG:logger:---- selected auction  ----
+DEBUG:logger:(1, 'Livro', 70.0, 'ACTIVE', 'Livro da vida', 'NEW', datetime.datetime(2021, 6, 2, 15, 5))
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 16:00:13] "GET /dbproj/auction/1?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTk1NzgsImV4cCI6MTYyMjU2MTM3OCwidXNlcm5hbWUiOiJzYXBvIn0.YzPIUJQLzkx0qfiSZIKKlPdj7GiTkwMYmk6ml70WCx0 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 1 and bidding: 70
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 16:00:39] "GET /dbproj/bid/1/70?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTk1NzgsImV4cCI6MTYyMjU2MTM3OCwidXNlcm5hbWUiOiJzYXBvIn0.YzPIUJQLzkx0qfiSZIKKlPdj7GiTkwMYmk6ml70WCx0 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 1 and bidding: 100
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 16:00:50] "GET /dbproj/bid/1/100?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTk1NzgsImV4cCI6MTYyMjU2MTM3OCwidXNlcm5hbWUiOiJzYXBvIn0.YzPIUJQLzkx0qfiSZIKKlPdj7GiTkwMYmk6ml70WCx0 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+DEBUG:logger:(1, 'Livro da vida')
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 16:01:02] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTk1NzgsImV4cCI6MTYyMjU2MTM3OCwidXNlcm5hbWUiOiJzYXBvIn0.YzPIUJQLzkx0qfiSZIKKlPdj7GiTkwMYmk6ml70WCx0 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 1 and bidding: 10
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 16:01:16] "GET /dbproj/bid/1/10?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTk1NzgsImV4cCI6MTYyMjU2MTM3OCwidXNlcm5hbWUiOiJzYXBvIn0.YzPIUJQLzkx0qfiSZIKKlPdj7GiTkwMYmk6ml70WCx0 HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'joao', 'passwords': '1234'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 16:01:35] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'benfica', 'passwords': '1234'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 16:02:49] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'Cardozo', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('Cardozo', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 16:03:04] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /auction              ###
+INFO:logger:---- new auction created ----
+DEBUG:logger:payload: {'initial_price': 100000, 'title': 'estádio da alvalade', 'description': 'Estou a vender a minha casa de banho', 'condition': 'USED', 'final_date': '2/07/21 15:05:00'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 16:03:59] "POST /dbproj/auction?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTk3ODQsImV4cCI6MTYyMjU2MTU4NCwidXNlcm5hbWUiOiJDYXJkb3pvIn0.HID-1b4bKGZ9OfTUExbisKQHmK3bxoy87DK1ZPFXpRI HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /auction              ###
+INFO:logger:---- new auction created ----
+DEBUG:logger:payload: {'initial_price': 100000, 'title': 'estádio do dragão', 'description': 'Estou a vender a minha casa de banho', 'condition': 'USED', 'final_date': '1/06/21 16:35:00'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 16:04:45] "POST /dbproj/auction?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTk3ODQsImV4cCI6MTYyMjU2MTU4NCwidXNlcm5hbWUiOiJDYXJkb3pvIn0.HID-1b4bKGZ9OfTUExbisKQHmK3bxoy87DK1ZPFXpRI HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/auctions              ###
+DEBUG:logger:---- users  ----
+DEBUG:logger:(2, 'Caneta do aço')
+DEBUG:logger:(5, 'Comprei uma nova, estou a leiloar esta x)')
+DEBUG:logger:(4, 'Camisola da Académica')
+DEBUG:logger:(3, 'Camisola do Benfica')
+DEBUG:logger:(1, 'Livro da vida')
+DEBUG:logger:(6, 'Estou a vender a minha casa de banho')
+DEBUG:logger:(7, 'Estou a vender a minha casa de banho')
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 16:05:38] "GET /dbproj/auctions?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTk3ODQsImV4cCI6MTYyMjU2MTU4NCwidXNlcm5hbWUiOiJDYXJkb3pvIn0.HID-1b4bKGZ9OfTUExbisKQHmK3bxoy87DK1ZPFXpRI HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+DEBUG:logger:(7, 'Estou a vender a minha casa de banho')
+DEBUG:logger:(6, 'Estou a vender a minha casa de banho')
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 16:05:49] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTk3ODQsImV4cCI6MTYyMjU2MTU4NCwidXNlcm5hbWUiOiJDYXJkb3pvIn0.HID-1b4bKGZ9OfTUExbisKQHmK3bxoy87DK1ZPFXpRI HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/app_stats            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 16:18:49] "GET /dbproj/app_stats?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTczMDMsImV4cCI6MTYyMjU1OTEwMywidXNlcm5hbWUiOiJzbmV2ZXMifQ.rHAlAon3nLsMIxP5ej0EDT4SF0J41Z6d_INCcdVJUpc HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'ikiru', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('ikiru', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 16:18:56] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/app_stats            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 16:19:06] "GET /dbproj/app_stats?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NjA3MzYsImV4cCI6MTYyMjU2MjUzNiwidXNlcm5hbWUiOiJpa2lydSJ9.jMNlM1a52WzwhftAAx2qn4nxvIFETxzFIBsmkPbjs0U HTTP/1.1" 200 -
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/dbproj/
+
+
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.0 online: http://localhost:8080/dbproj/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-838-552
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: POST /user              ###
+INFO:logger:---- new user added  ----
+DEBUG:logger:payload: {'username': 'BD', 'email': 'bddefesa@gmail.com', 'passwords': '1234'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 16:58:04] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /user              ###
+INFO:logger:---- new user added  ----
+DEBUG:logger:payload: {'username': 'defesa', 'email': 'defesa@gmail.com', 'passwords': '1234'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 16:58:13] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'defesa', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('defesa', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 16:58:20] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /auction              ###
+INFO:logger:---- new auction created ----
+DEBUG:logger:payload: {'initial_price': 100000, 'title': 'estádio do dragão', 'description': 'Estou a vender a minha casa de banho', 'condition': 'USED', 'final_date': '1/06/21 16:35:00'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 16:58:58] "POST /dbproj/auction?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NjMxMDAsImV4cCI6MTYyMjU2NDkwMCwidXNlcm5hbWUiOiJkZWZlc2EifQ.8TeCw1FQRsiUs4ok6jv3733zdTng0u0dLLUSvoNXPyc HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /auction              ###
+INFO:logger:---- new auction created ----
+DEBUG:logger:payload: {'initial_price': 100000, 'title': 'estádio do dragão', 'description': 'Estou a vender a minha casa de banho', 'condition': 'USED', 'final_date': '1/06/21 17:05:00'}
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 16:59:09] "POST /dbproj/auction?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NjMxMDAsImV4cCI6MTYyMjU2NDkwMCwidXNlcm5hbWUiOiJkZWZlc2EifQ.8TeCw1FQRsiUs4ok6jv3733zdTng0u0dLLUSvoNXPyc HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/auctions              ###
+DEBUG:logger:---- users  ----
+DEBUG:logger:(2, 'Caneta do aço')
+DEBUG:logger:(5, 'Comprei uma nova, estou a leiloar esta x)')
+DEBUG:logger:(4, 'Camisola da Académica')
+DEBUG:logger:(3, 'Camisola do Benfica')
+DEBUG:logger:(1, 'Livro da vida')
+DEBUG:logger:(6, 'Estou a vender a minha casa de banho')
+DEBUG:logger:(7, 'Estou a vender a minha casa de banho')
+DEBUG:logger:(8, 'Estou a vender a minha casa de banho')
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 16:59:16] "GET /dbproj/auctions?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NjMxMDAsImV4cCI6MTYyMjU2NDkwMCwidXNlcm5hbWUiOiJkZWZlc2EifQ.8TeCw1FQRsiUs4ok6jv3733zdTng0u0dLLUSvoNXPyc HTTP/1.1" 200 -
+INFO:logger:###              /dbproj/auctions/<keyword>             ###
+DEBUG:logger:keyword: 5
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 16:59:33] "GET /dbproj/auctions/5?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTU3NjIsImV4cCI6MTYyMjU1NzU2MiwidXNlcm5hbWUiOiJCRCJ9.kUsxSYq3x0y-mvzC3CzWyPpkiQxID6FtSXowy_ddmxI HTTP/1.1" 200 -
+INFO:logger:###              /dbproj/auctions/<keyword>             ###
+DEBUG:logger:keyword: 5
+DEBUG:logger:(5, 'Comprei uma nova, estou a leiloar esta x)')
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 16:59:44] "GET /dbproj/auctions/5?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NjMxMDAsImV4cCI6MTYyMjU2NDkwMCwidXNlcm5hbWUiOiJkZWZlc2EifQ.8TeCw1FQRsiUs4ok6jv3733zdTng0u0dLLUSvoNXPyc HTTP/1.1" 200 -
+INFO:logger:###              /dbproj/auctions/<keyword>             ###
+DEBUG:logger:keyword: livro
+DEBUG:logger:(1, 'Livro da vida')
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 16:59:52] "GET /dbproj/auctions/livro?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NjMxMDAsImV4cCI6MTYyMjU2NDkwMCwidXNlcm5hbWUiOiJkZWZlc2EifQ.8TeCw1FQRsiUs4ok6jv3733zdTng0u0dLLUSvoNXPyc HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/auction/<ean>            ###
+DEBUG:logger:auction: 1
+DEBUG:logger:---- selected auction  ----
+DEBUG:logger:(1, 'Livro', 100.0, 'ACTIVE', 'Livro da vida', 'NEW', datetime.datetime(2021, 6, 2, 15, 5))
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 17:00:05] "GET /dbproj/auction/1?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NjMxMDAsImV4cCI6MTYyMjU2NDkwMCwidXNlcm5hbWUiOiJkZWZlc2EifQ.8TeCw1FQRsiUs4ok6jv3733zdTng0u0dLLUSvoNXPyc HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 1 and bidding: 10
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 17:00:44] "GET /dbproj/bid/1/10?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NjMxMDAsImV4cCI6MTYyMjU2NDkwMCwidXNlcm5hbWUiOiJkZWZlc2EifQ.8TeCw1FQRsiUs4ok6jv3733zdTng0u0dLLUSvoNXPyc HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/bid/             ###
+INFO:logger:---- new bid done  ----
+DEBUG:logger:auction: 1 and bidding: 100000
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 17:00:51] "GET /dbproj/bid/1/100000?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NjMxMDAsImV4cCI6MTYyMjU2NDkwMCwidXNlcm5hbWUiOiJkZWZlc2EifQ.8TeCw1FQRsiUs4ok6jv3733zdTng0u0dLLUSvoNXPyc HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/user/auctions_activity            ###
+DEBUG:logger:(8, 'Estou a vender a minha casa de banho')
+DEBUG:logger:(1, 'Livro da vida')
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 17:01:11] "GET /dbproj/user/auctions_activity?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NjMxMDAsImV4cCI6MTYyMjU2NDkwMCwidXNlcm5hbWUiOiJkZWZlc2EifQ.8TeCw1FQRsiUs4ok6jv3733zdTng0u0dLLUSvoNXPyc HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/auction/<ean>            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 17:01:46] "PUT /dbproj/auction/8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NTcwMjEsImV4cCI6MTYyMjU1ODgyMSwidXNlcm5hbWUiOiJCRCJ9.-vmJtmCOr5eSsUO3X1bqAy81sypiw3rURVqwS8VfPzE HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/auction/<ean>            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 17:01:52] "PUT /dbproj/auction/8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NjMxMDAsImV4cCI6MTYyMjU2NDkwMCwidXNlcm5hbWUiOiJkZWZlc2EifQ.8TeCw1FQRsiUs4ok6jv3733zdTng0u0dLLUSvoNXPyc HTTP/1.1" 200 -
+INFO:logger:###              DEMO: POST /dbproj/<ean>/mural_message            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 17:02:20] "POST /dbproj/5/mural_message?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NjMxMDAsImV4cCI6MTYyMjU2NDkwMCwidXNlcm5hbWUiOiJkZWZlc2EifQ.8TeCw1FQRsiUs4ok6jv3733zdTng0u0dLLUSvoNXPyc HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/notification_box/<view>            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 17:02:45] "GET /dbproj/notification_box/not_read?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NjMxMDAsImV4cCI6MTYyMjU2NDkwMCwidXNlcm5hbWUiOiJkZWZlc2EifQ.8TeCw1FQRsiUs4ok6jv3733zdTng0u0dLLUSvoNXPyc HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/notification_box/<view>            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 17:02:51] "GET /dbproj/notification_box/all?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NjMxMDAsImV4cCI6MTYyMjU2NDkwMCwidXNlcm5hbWUiOiJkZWZlc2EifQ.8TeCw1FQRsiUs4ok6jv3733zdTng0u0dLLUSvoNXPyc HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/<ean>/terminate_auction            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 17:03:25] "PUT /dbproj/8/terminate_auction HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/<ean>/terminate_auction            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 17:03:31] "PUT /dbproj/7/terminate_auction HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /user              ###
+INFO:logger:---- New user authenticated ----
+DEBUG:logger:payload: {'username': 'ikiru', 'passwords': '1234'}
+DEBUG:logger:---- user authenticating  ----
+DEBUG:logger:('ikiru', '1234', False)
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 17:03:58] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/give_permissions/          ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 17:04:09] "PUT /dbproj/give_permissions?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NjM0MzgsImV4cCI6MTYyMjU2NTIzOCwidXNlcm5hbWUiOiJpa2lydSJ9.IhsUdQ0yVywtHADGVgwFKC9NGoTamuXYbrZnq3Abw_k HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/ban_user            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 17:04:32] "PUT /dbproj/ban_user?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NjM0MzgsImV4cCI6MTYyMjU2NTIzOCwidXNlcm5hbWUiOiJpa2lydSJ9.IhsUdQ0yVywtHADGVgwFKC9NGoTamuXYbrZnq3Abw_k HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/ban_user            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 17:04:48] "PUT /dbproj/ban_user?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NjM0MzgsImV4cCI6MTYyMjU2NTIzOCwidXNlcm5hbWUiOiJpa2lydSJ9.IhsUdQ0yVywtHADGVgwFKC9NGoTamuXYbrZnq3Abw_k HTTP/1.1" 200 -
+INFO:logger:###              DEMO: PUT /dbproj/auction_cancellation            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 17:05:18] "PUT /dbproj/auction_cancellation?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NjM0MzgsImV4cCI6MTYyMjU2NTIzOCwidXNlcm5hbWUiOiJpa2lydSJ9.IhsUdQ0yVywtHADGVgwFKC9NGoTamuXYbrZnq3Abw_k HTTP/1.1" 200 -
+INFO:logger:###              DEMO: GET /dbproj/app_stats            ###
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2021 17:05:28] "GET /dbproj/app_stats?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjI1NjM0MzgsImV4cCI6MTYyMjU2NTIzOCwidXNlcm5hbWUiOiJpa2lydSJ9.IhsUdQ0yVywtHADGVgwFKC9NGoTamuXYbrZnq3Abw_k HTTP/1.1" 200 -
