@@ -11,7 +11,7 @@
 
 ## Description
 This project was developed for Databases subject @University of Coimbra, Informatics Engineering <br>
-Consists in develop a program that implements an Auction System using the framework Psycopg2
+Consists in develop a program that implements an Auction System using the framework Psycopg2 and other database elements
 
 #### Main Languages:
 ![](https://img.shields.io/badge/Python-333333?style=flat&logo=python&logoColor=4F74DA) ![](https://img.shields.io/badge/PostgresSQL-333333?style=flat&logo=postgresql&logoColor=white)
