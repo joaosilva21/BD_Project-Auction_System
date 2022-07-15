@@ -49,6 +49,6 @@ After installing PgAdmin, Postman and all libraries:
    ![image](https://i.imgur.com/6GJpM8z.png)
 
 ## Authors:
-- [João Silva](https://github.com/ikikara)
+- [João Silva](https://github.com/joaosilva21)
 - [Sofia Neves](https://github.com/sneves-git)
 - [Tatiana Almeida](https://github.com/TatianaSAlmeida)
